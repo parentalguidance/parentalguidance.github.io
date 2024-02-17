@@ -77,7 +77,7 @@ export default {
       emailInvalid: false,
       reason: "",
       submitted: false,
-      dialogVisible: true,
+      dialogVisible: false,
     }
   },
   computed: {
@@ -113,7 +113,6 @@ export default {
       }
       const requestOptions = {
         method: "POST",
-        mode: 'no-cors',
         headers: { "content-type": "application/json", "x-token": TOKEN },
         body: JSON.stringify({
           name: this.name,
